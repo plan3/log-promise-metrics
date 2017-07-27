@@ -1,0 +1,19 @@
+{
+    "extends": "vgno",
+    "env": {
+        "node": true,
+        "mocha": true,
+        "browser": false,
+        "es6": true
+    },
+    "plugins": [
+        "promise"
+    ],
+    "rules": {
+        "camelcase": 0,
+        "no-underscope-dangle": 0,
+        "promise/param-names": 2,
+        "promise/always-return": 2,
+        "promise/catch-or-return": 2
+    }
+}
