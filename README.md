@@ -1,5 +1,7 @@
 # log-promise-metrics
 
+[![Build Status](https://travis-ci.org/plan3/log-promise-metrics.svg?branch=master)](https://travis-ci.org/plan3/log-promise-metrics)
+
 Promise based metrics library to dump metrics in a format consumable by [datadog](https://github.com/kubek2k/heroku-datadog-drain-golang) and [librato](https://devcenter.heroku.com/articles/librato#custom-log-based-metrics) drains
 
 ## Installation
@@ -50,5 +52,6 @@ metrics.dropToLogs();
 const elementsInBasketPromise = require('pg-promise')({..}).query('SELECT ...');
 metrics.sample('elementsInBasket', v => v, elementsInBasketPromise);
 metrics.dropToLogs();
+// measure#elementsInBasket=42
 ```
 
