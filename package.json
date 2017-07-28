@@ -1,0 +1,21 @@
+{
+  "name": "log-promise-metrics",
+  "version": "1.0.0",
+  "description": "Uses stdout to dump metrics in a format consumed by datadog drain or librato",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js",
+    "lint": "eslint .",
+    "nsp": "nsp check"
+  },
+  "author": "Jakub Janczak <jakub.janczak@schibsted.pl>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "3.19.0",
+    "eslint-config-vgno": "7.0.0",
+    "eslint-plugin-promise": "3.5.0",
+    "mocha": "^3.4.2",
+    "sinon": "^2.4.1"
+  }
+}
