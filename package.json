@@ -17,5 +17,8 @@
     "eslint-plugin-promise": "3.5.0",
     "mocha": "^3.4.2",
     "sinon": "^2.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
