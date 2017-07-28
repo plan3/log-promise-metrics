@@ -7,7 +7,7 @@ Promise based metrics library to dump metrics in a format consumable by [datadog
 ## Installation
 
 ```
-npm install log-promise-metrics
+npm install @plan3-relate/log-promise-metrics
 ```
 
 ## Usage
