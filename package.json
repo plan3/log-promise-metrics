@@ -1,5 +1,5 @@
 {
-  "name": "log-promise-metrics",
+  "name": "@plan3-relate/log-promise-metrics",
   "version": "1.0.0",
   "description": "Uses stdout to dump metrics in a format consumed by datadog drain or librato",
   "main": "index.js",
