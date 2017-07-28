@@ -8,6 +8,6 @@ deploy:
   email: billing.relate@schibsted.media
   on:
     branch: master
-    node: '6'
+    node: '8'
   api_key:
     secure: vE53IZHfL8AajxTmlLXOjRl1htJNzAmIl/atrP4uZHA2EMSCwxA3onu1+VsGjbH2hmnrhLvU8rvxNicQy/FyYcL/e9Kgwmuwcsd5E+UBLx+41b2wlM/bqYoYBu8Tij8I9HGDj14DR7wrr3eXlGMP+cjO5mzeGOgvytpXSpg8uEvfZQtTBwArFoJPxIjGX2ypNrz+BpUCeXw0KSDHYL/wHi5ojuBTtpECswEIGoiF2ZEezE16CDtbTISNvP63Cj1fnLHNnObSyC9g/DJx663S1+Lm8Cu0He+UNlz869nbaFpeAFVYPqiUmFdnzIRllCNL9KE7Ra5TarxFyEPMmC+pU5W2hs03DOBx3EIQcSnRXS3C4S7mOLYS1yG/dQ640c2WMuFMymyJ2/5T1V9wvoXNgNZOl4M6DTfRtxUJXv7C9tMaLEpTmT9dWF3iZEQ+y2pK7AR96f2+XYFSjcbqmcF6699VElrty+SPGgq/c+1ElsjUKHkmz7JYOz1u8Rd9XFgxY47f1LwaJeBlH5TsUQfOyenCjSUciuJ/4PhaTUsc8yWLmgjEHQIfp7JD2k+UMTQ0ostCbBVNNWfkHi/Q7beFwnctnWZreR0pUc6DCnwejgxUQFjax8kVDBOZQqgXj/jihVFu+y1peDZ/1nrKWjvaGZCHkPBHveQC5nTmX/h7nhw=
