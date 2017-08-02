@@ -19,8 +19,8 @@ function timed(promise) {
         });
 }
 
-module.exports = (logFn) =>
-    (baseName) => {
+module.exports = (logFn, baseName) =>
+    () => {
         const collected = {
             measure: {},
             count: {},

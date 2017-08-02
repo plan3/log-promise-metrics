@@ -13,9 +13,9 @@ npm install @plan3-relate/log-promise-metrics
 ## Usage
 
 ```javascript
-const metricsFactory = require('@plan3-relate/log-promise-metrics')(console.log);
+const metricsFactory = require('@plan3-relate/log-promise-metrics')(console.log, 'baseName');
 
-const metrics = metricsFactory('baseName');
+const metrics = metricsFactory();
 ```
 
 ### Measure time passed during promise execution
