@@ -64,7 +64,7 @@ module.exports = (logFn, baseName) =>
                     })
                     .catch((err) => {
                         collected.measure[`${name}.error_duration`] = err.duration;
-                        throw err.reason;
+                        throw err.reason || err;
                     });
             }
         };
