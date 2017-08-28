@@ -5,7 +5,7 @@ function timed(promise) {
 
     return Promise.resolve(new Date())
         .then(startTime => {
-            return promise
+            return Promise.resolve(promise)
                 .then(result => [timeDelta(startTime, new Date()), result])
                 .catch(err => {
                     const newErr = {
@@ -39,19 +39,19 @@ module.exports = (logFn, baseName) =>
                 return metrics;
             },
             sample: (name, metricProducer, promise) => {
-                return promise.then(v => {
+                return Promise.resolve(promise).then(v => {
                     collected.sample[name] = metricProducer(v);
                     return v;
                 });
             },
             measure: (name, metricProducer, promise) => {
-                return promise.then(v => {
+                return Promise.resolve(promise).then(v => {
                     collected.measure[name] = metricProducer(v);
                     return v;
                 });
             },
             increment: (name, incrValueProducer, promise) => {
-                return promise.then(v => {
+                return Promise.resolve(promise).then(v => {
                     collected.count[name] = incrValueProducer(v);
                     return v;
                 });
