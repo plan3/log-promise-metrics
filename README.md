@@ -22,8 +22,9 @@ const metrics = metricsFactory();
 
 ```javascript
 const getAllValues = require('request-promise')({url: ...});
-metrics.timed('getAllValues', getAllValues);
-metrics.dropToLogs();
+metrics.timed('getAllValues', getAllValues)
+    // some then's after
+    .then(() => metrics.dropToLogs());
 // measure#baseName.getAllValues.success_duration=10ms
 // or
 // measure#baseName.getAllValues.error_duration=10ms
@@ -33,8 +34,9 @@ metrics.dropToLogs();
 
 ```javascript
 const sessionCountPromise = Promise.resolve(['0000', '0001', '0002']);
-metrics.increment('sessionsCount', v => v.length, sessionsCountPromise);
-metrics.dropToLogs();
+metrics.increment('sessionsCount', v => v.length, sessionCountPromise)
+    // some then's after
+    .then(() => metrics.dropToLogs());
 // count#baseName.sessionsCount=3
 ```
 
@@ -50,7 +52,8 @@ metrics.increment('visitorsCount')
 ```javascript
 const elementsInBasketPromise = require('pg-promise')({..}).query('SELECT ...');
 metrics.sample('elementsInBasket', v => v, elementsInBasketPromise);
-metrics.dropToLogs();
+    // some then's after
+    .then(() => metrics.dropToLogs());
 // sample#baseName.elementsInBasket=10
 ```
 
@@ -58,7 +61,8 @@ metrics.dropToLogs();
 ```javascript
 const elementsInBasketPromise = require('pg-promise')({..}).query('SELECT ...');
 metrics.sample('elementsInBasket', v => v, elementsInBasketPromise);
-metrics.dropToLogs();
+    // some then's after
+    .then(() => metrics.dropToLogs());
 // measure#elementsInBasket=42
 ```
 
