@@ -39,6 +39,15 @@ describe('Metrics collector', () => {
             .then(() => assert.isTrue(/count#baseName.someName=1/.test(logSpy.args[0][0])));
     });
 
+    it('Will log increment by one of count metric from promise', () => {
+        const logSpy = sinon.spy();
+        const metrics = metricsFactory(logSpy, 'baseName')();
+        return metrics.incrementByOne('someName')
+            .then(() => metrics.dropToLogs())
+            .then(() => assert.isTrue(/count#baseName.someName=1/.test(logSpy.args[0][0])));
+    });
+
+
     it('Will log sample metric from promise', () => {
         const logSpy = sinon.spy();
         const metrics = metricsFactory(logSpy, 'baseName')();
