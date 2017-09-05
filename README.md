@@ -38,6 +38,13 @@ metrics.dropToLogs();
 // count#baseName.sessionsCount=3
 ```
 
+### Increment count by 1
+```javascript
+metrics.increment('visitorsCount')
+    // some then's after
+    .then(() => metrics.dropToLogs());
+```
+
 ### Use custom sample
 
 ```javascript

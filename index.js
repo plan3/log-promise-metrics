@@ -56,6 +56,13 @@ module.exports = (logFn, baseName) =>
                     return v;
                 });
             },
+            incrementByOne: (name) => {
+                return Promise.resolve()
+                    .then(() => {
+                        collected.count[name] = (collected.count[name] || 0) + 1;
+                        return collected.count[name];
+                    })
+            },
             timed: (name, promise) => {
                 return timed(promise)
                     .then(([duration, result]) => {
